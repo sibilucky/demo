@@ -14,46 +14,53 @@
 
     <properties>
         <java.version>11</java.version>
-        <spring-boot.version>3.8.1</spring-boot.version> <!-- Add Spring Boot version -->
+        <spring-boot.version>3.0.0</spring-boot.version> <!-- Version aligned -->
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>3.0.0</version> <!-- Version from property -->
+            <version>3.0.0</version> <!-- Aligned version -->
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>3.0.0</version>
+            <version>3.0.0</version> <!-- Aligned version -->
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
-            <version>3.0.0</version>
+            <version>3.0.0</version> <!-- Aligned version -->
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <version>3.0.0</version>
+            <version>3.0.0</version> <!-- Aligned version -->
             <scope>test</scope>
         </dependency>
     </dependencies>
 
     <build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.8.1</version> <!-- Latest compatible version -->
-            <configuration>
-                <source>1.8</source> <!-- Ensure source version is 1.8 -->
-                <target>1.8</target> <!-- Ensure target version is 1.8 -->
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
-
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.example.Application</mainClass> <!-- Update with your main class -->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
+
 
