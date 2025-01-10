@@ -60,8 +60,8 @@ pipeline {
                 echo "Deploying Docker container with tag: ${params.TAG}"
                 sh """
                      #!/bin/bash
-                    docker build -t springboot:latest .
-                    docker run -d -p 8082:8082 springboot:latest
+                    docker build -t demo:latest .
+                    docker run -d -p 8082:8082 demo:latest
                     """
 
                
